@@ -1,0 +1,53 @@
+.auth-form
+{
+    margin-top: 100px;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 30px 20px;
+    width: 60%;
+    margin-left: 200px
+}
+
+
+.auth-form form div label
+{
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    color: rgb(86, 86, 92);
+}
+
+.auth-form form div input
+{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.auth-form form h1
+{
+    font-size: 40px;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.field
+{
+    margin: 20px 0px;
+}
+
+.submit button
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.submit button:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

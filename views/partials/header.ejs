@@ -1,0 +1,58 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script   src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+      <link href= "/public/assets/blogs.css" rel="stylesheet" type="text/css">
+      <link href= "/public/assets/show.css" rel="stylesheet" type="text/css">
+      <link href= "/public/assets/auth.css" rel="stylesheet" type="text/css">
+      <link href= "/public/assets/search.css" rel="stylesheet" type="text/css">
+      <link href= "/public/assets/profile.css" rel="stylesheet" type="text/css">
+      <script>
+        $(document).ready(function(){     //For comment slide down button
+          $('com-edit-but').click(function(){
+              $("form .com-edit-form").toggleClass("noDisplay");
+          });
+        });
+      </script>
+    </head>
+
+    <body>
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo"><img src="data:image/jpeg;base64,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" alt=""></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/search"><i class="material-icons left">search</i>Search blogs</a></li>
+            <li><a href="/blogs">Home</a></li>
+            <% if(user)
+            {%>
+              <li><a href="/logout">Logout</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <img id="smallprofileImg" src="/<%= user.img.path %>" alt="">
+            <%}
+            else
+            {%>
+              <li><a href="/register">Signup</a></li>
+              <li><a href="/login">Login</a></li>
+            <%}%>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    
+  
+
+      

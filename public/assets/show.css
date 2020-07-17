@@ -1,0 +1,209 @@
+body .show-page
+{
+    margin-top: 100px;
+    width: 60%;
+}
+
+.header h1
+{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header h2
+{
+    font-size: 30px;
+}
+
+.author-details
+{
+    margin-top: 100px;
+}
+.image
+{
+    text-align: center;
+    margin: 100px 70px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.show-img
+{
+    max-height: 600px;
+    text-align: center;
+}
+
+#blogprofileImg
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#username
+{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: left;
+}
+
+#like
+{
+    position: fixed;
+    top: 51%;
+    left: 100px;
+}
+
+#like p
+{
+    position: fixed;
+    top: 50%;
+    left: 70px;
+}
+
+.noDisplay
+{
+    display: none;
+}
+
+.text p
+{
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.comments
+{
+    
+    margin-top: 50px;
+}
+
+.comments h3
+{
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+}
+
+.comments form
+{
+    margin: 35px 0;
+}
+.comments form textarea
+{
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.comments button
+{
+    border: none;
+    margin-top: 10px;
+    height: 30px;
+    width: 70px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+
+.comments form button:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.comment
+{
+    border-bottom: solid 1px black;
+    margin-bottom: 20px;
+}
+
+.comment h4
+{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.comment p
+{
+    font-size: 15px;
+    margin: 0;
+    text-align: right;
+}
+
+.comment-text
+{
+    margin-left: 12px;
+}
+.comment-text p
+{
+    text-align: left;
+}
+
+.change-comment form
+{
+    display: inline-block;
+}
+
+.change-comment textarea
+{
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.change-comment button[class=edit]
+{
+    margin-top: 13px;
+}
+
+.change-comment button
+{
+    border: none;
+    margin-top: 10px;
+    height: 30px;
+    width: 70px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+.change-comment button:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+body .collapsible
+{
+    border: none;
+}
+
+#like button 
+{
+    border: none;
+    padding: 0 ;
+    transition: all 0.5s;
+}
+
+#like button:hover
+{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#like button i
+{
+    color: white;
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    padding-top: 7px;
+
+}

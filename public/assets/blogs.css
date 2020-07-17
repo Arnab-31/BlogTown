@@ -1,0 +1,114 @@
+body nav
+{
+    background-color: #000;
+    position: fixed;
+    z-index: 10;
+    top: -5px;
+}
+
+body .container
+{
+    width: 80%;
+}
+
+body .card
+{
+    height: 480px;
+}
+body div .card-image
+{
+    height: 300px;
+    overflow: hidden;
+}
+
+.card:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav ul a:hover
+{
+    background-color: rgb(56, 54, 54)
+}
+
+.head
+{
+    border: solid 2px black;
+    font-size: 30px;
+    font-family: 'Cinzel';
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.head h1
+{
+    font-size: 30px;
+    margin: 30px 20px;
+}
+
+.head a
+{
+    margin-left: 70%;
+    margin-bottom: 30px;
+    animation: button 2s ease-out;
+}
+
+.head a:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.brand-logo img
+{
+    height: 63px;
+    width:  63px;
+}
+
+body .card-content p
+{
+    color: #000;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html body .card-action #author
+{
+    color: #000;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+#author:hover
+{
+    border-bottom: solid 1px black;
+}
+.author-tag
+{
+    color: rgb(86, 86, 92);
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#profileImg
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#smallprofileImg
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-right: 5px;
+    float: right;
+}
+
+
+  @keyframes button {
+    from {margin-left: 0%;}
+    to {margin-left: 70%;}
+  }

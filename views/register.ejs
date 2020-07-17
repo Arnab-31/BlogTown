@@ -1,0 +1,33 @@
+<%- include ('partials/header') %>  
+
+
+<div class="container">
+    <div class="auth-form">
+        <form action="/register" enctype="multipart/form-data" method="POST">
+            <h1>BlogTown</h1>
+            <div class="field">
+                <label for="username">UserName</label>
+                <input type="text" name="username" placeholder="name">
+            </div> 
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <div class="field">
+                <label for="about">About You</label>
+                <input type="text" name="about" placeholder="Something about you">
+            </div>
+            <div class="field">
+                <label>upload your profile photo</label>
+                <input type="file" name="myImage" accept="image/*" />
+            </div>
+            <div class="submit"> 
+                <button><a class="waves-effect waves-light btn-large black">SignUp!</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include ('partials/footer') %> 

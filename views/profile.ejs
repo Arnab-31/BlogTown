@@ -1,0 +1,54 @@
+<%- include ('partials/header') %>
+
+<div class="container">
+  <div class="user-details row">
+    <div class="col s2">
+      <img id="profileImg" src="/<%= Puser.img.path %>" alt="">
+    </div>
+    <div class="col s10 user-info">
+      <h2><%= Puser.username %></h2>
+      <p><%= Puser.about %> </p>
+    </div>
+  </div>
+  <h2 id="blog-tag">Blogs Written</h2>
+  <% userBlogs.forEach(function(blog)
+  {%>
+    <div class="row">
+      <div class="col s12 m2">
+      </div>
+      <div class="col s12 m8">
+        <div class="card"><a href="/blogs/<%= blog.id %>">
+          <div class="card-image">
+            <img src="<%= blog.image %>">
+            <span class="card-title"></span>
+          </div>
+          <div class="card-content">
+            <p><%= blog.title %></p>
+          </div>
+          <% if(user && Puser._id.equals(user._id)){%>
+              <div class="card-action profile-card-action">
+                <a class="waves-effect waves-light btn modal-trigger black" href="/blogs/<%= blog.id %>/edit">Edit</a>
+                <a class="waves-effect waves-light btn modal-trigger black" href="#modal1">Delete</a>
+              </div>
+          <%}%>
+        </div></a>
+      </div>
+      <div class="col s12 m2">
+      </div>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Confirmation</h4>
+          <p>Ar you sure you want to delete the blog?</p>
+        </div>
+        <div class="modal-footer">
+          <form action="/blogs/<%= blog.id %>?_method=DELETE" method="POST">
+            <button><a class="modal-close waves-effect waves-green btn-flat black">Delete</a></button>
+          </form>
+          <a href="#!" class="modal-close waves-dark waves-effect btn-flat">Cancel</a>
+        </div>
+      </div>
+    </div>
+  <%})%>
+</div>
+
+<%- include ('partials/footer') %> 

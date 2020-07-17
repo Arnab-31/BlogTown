@@ -1,0 +1,114 @@
+<%- include ('../partials/header') %>    
+
+<div class="container show-page">
+    <div class="header">
+        <h1><%= blog.title %></h1>
+        <div class="author-details row">
+            <div class="col s1">
+                <img id="blogprofileImg" src="/<%= blog.author.img.path %>" alt="">
+            </div>
+            <div class="col s11"> 
+                <span  id="username"><%= blog.author.username %></span>
+            </div>
+        </div>
+        <div id="like">
+            <% if(user)
+            {
+                    if(user.likedBlogs.includes(blog._id))
+                {%>
+                    <form action="/blogs/<%= blog._id %>/unlike" method="POST">
+                        <button id="like-but"><i class="material-icons">thumb_down</i></button>
+                    </form>
+                <%}
+                else
+                {%>
+                    <form action="/blogs/<%= blog._id %>/like" method="POST">
+                        <button id="unlike-but"><i class="material-icons">thumb_up</i></button>
+                    </form>
+                <%}
+            }
+            else
+            {
+                {%>
+                    <form action="/blogs/<%= blog._id %>/like" method="POST">
+                        <button><i class="material-icons">thumb_up</i></button>
+                    </form>
+                <%}
+            }%>
+            <p><%= blog.likes %></p>
+        </div>
+    </div>
+    <div class="image">
+        <img class="show-img" src="<%= blog.image %>" alt="">
+    </div>
+
+    <div class="text">
+        <p><%= blog.text %></p>
+    </div>
+    <div class="comments">
+        <h3>Comments</h3>
+        <form action="/blogs/<%= blog._id %>/comments" method="POST">
+            <textarea name="comment[text]" id="" cols="30" rows="10" placeholder="Type your Comment" ></textarea>
+            <div>
+                <button>Submit!</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <% blog.comments.forEach(function(comment){%>
+            <div class="comment"> 
+                <div class="row">
+                    <div class="col s3">
+                        <h4><%= comment.username %></h4>
+                    </div>
+                    <div class="col s9"> 
+                        <%if(year - comment.timestamp.year > 0)
+                        {%>
+                            <p><%= year - comment.timestamp.year %> years ago</p>
+                        <%}
+                        else if(month - comment.timestamp.month > 0)
+                        {%>
+                            <p><%= month - comment.timestamp.month %> months ago</p>
+                        <%}
+                        else if(day - comment.timestamp.day > 0)
+                        {
+                        %>
+                            <p><%= day - comment.timestamp.day %> days ago</p>
+                        <%}
+                        else 
+                        {%>
+                            <p>today</p>
+                        <%}%>
+                    </div>
+                </div>
+                <div class="comment-text">
+                    <p><%= comment.text %></p>
+                </div>
+                <ul class="collapsible">
+                    <li>
+                    <% if(user && comment.author.id.equals(user._id)){%>
+                    <div class="collapsible-header"><i class="material-icons">create</i>Change Your Comment</div>
+                    <%}%>
+                    <div class="collapsible-body">
+                        <span class="change-comment">
+                            <form action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                                <textarea name="comment[text]"><%= comment.text %></textarea>
+                                <button class="edit">Edit</button>
+                            </form>
+                            <form action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                <button>Delete</button>
+                            </form>
+                        </span>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        <%})%>
+    </div>
+</div>
+
+
+
+
+<%- include ('../partials/footer') %> 

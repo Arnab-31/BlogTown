@@ -1,0 +1,65 @@
+.user-details
+{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px black;
+    padding-bottom: 40px;
+}
+
+.user-info
+{
+    margin-left: 40px;
+}
+
+.user-details h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-top: 1.5rem;
+
+}
+
+.user-details p
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(161, 161, 170);
+}
+
+#blog-tag
+{
+    margin-top: 0;
+    font-size: 25px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 40px;
+}
+
+.card-action a
+{
+    margin-right: 10px;
+}
+
+.profile-card-action a:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-footer form
+{
+    display: inline-block;
+}
+
+.modal-footer button a
+{
+    color: #fff;
+}
+
+.modal-footer button
+{
+    border: none;
+}
+
+.modal-footer a:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

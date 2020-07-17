@@ -1,0 +1,27 @@
+<%- include ('../partials/header') %>
+
+<div class="container">
+    <div class="auth-form">
+        <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+            <h1>Edit Your blog</h1>
+            <div class="field">
+                <label for="blog[title]">Blog Title</label>
+                <input type="text" name="blog[title]" value="<%= blog.title %>">
+            </div>
+            <div class="field"> 
+                <label for="blog[image]">Blog Image</label>
+                <input type="text" name="blog[image]" value="<%= blog.image %>">
+            </div>
+            <div class="field"> 
+                <textarea name="blog[text]" id="" cols="50" rows="2000"><%= blog.text %></textarea>
+            </div>
+            <div class="submit"> 
+                <button><a class="waves-effect waves-light btn-large black">Submit!</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include ('../partials/footer') %> 

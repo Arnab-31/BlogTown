@@ -1,0 +1,31 @@
+<%- include ('../partials/header') %>   
+
+
+<div class="container">
+  <div class="head">
+    <h1>Read our curated blogs written by sensational writers in BlogTown. You can be one too.</h1>
+    <a class="waves-effect waves-light btn-large black login" href="/blogs/new">Write a Blog</a>
+  </div>
+
+  <div class="row">
+    <% blogs.forEach(function(blog)
+      {%>
+          <div class="col s12 m6">
+            <div class="card"><a href="/blogs/<%= blog._id %>">
+              <div class="card-image">
+                <img src="<%= blog.image %>">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p><%=  blog.title %></p>
+              </div>
+              <div class="card-action">
+                <a href="/profile/<%= blog.author.id %>" id="author"><span class="author-tag">Author:     </span><%= blog.author.username %></a>
+              </div>
+            </div></a>
+          </div>
+      <%})%>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %> 

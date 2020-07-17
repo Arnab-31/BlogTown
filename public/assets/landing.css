@@ -1,0 +1,71 @@
+html body
+{
+    margin: 40px 50px;
+}
+
+img
+{
+    height: 70vh;
+    margin-top: 50px;
+    animation-name: img-animate;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+
+}
+
+.text-box
+{
+    margin-top: 50px;
+    height: 50vh;
+    animation-name: text-animate;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    top: -100px;
+}
+
+.text-box h1
+{
+    font-family: 'Cinzel', serif;
+    font-size: 90px;
+}
+
+.text-box p
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(86, 86, 92);
+    margin-top: 0;
+}
+
+.button-box
+{
+    margin-top: 120px;
+}
+
+.button-box .login
+{
+    margin: 0 20px;
+}
+
+.button-box a:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Copyright
+{
+    text-align: center;
+    margin-top: 35px;
+
+}
+
+
+@keyframes text-animate {
+    from {margin-top: 1000px;}
+    to {margin-top: 0px;}
+  }
+
+@keyframes img-animate {
+    from {margin-left: 1000px;}
+    to {margin-left: 0px;}
+  }

@@ -1,0 +1,52 @@
+.search-bar
+{
+    margin-top: 100px;
+    height: 100px;
+    margin-bottom: 35px;
+}
+
+.search-bar form
+{
+    height: 100px;
+    font-size: 90px;
+}
+
+body .search-bar form .input-field input[type=search]
+{
+    height: 100px;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 5rem;
+    border-bottom: solid 1px black;
+}
+
+body .search-bar form .input-field input[type=search]:focus
+{
+    border-bottom: solid 1px black;
+}
+
+.search-bar form .input-field button
+{
+    position: absolute;
+    top: -1px;
+    height: 100px;
+    width: 50px;
+}
+
+.search-bar form .input-field button:active
+{
+    background-color: black;
+}
+
+.no-blogs
+{
+    margin-top: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(161, 161, 170);
+}
+
+.no-blogs h1
+{
+    font-size: 70px;
+}
